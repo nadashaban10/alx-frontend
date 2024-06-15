@@ -533,3 +533,7 @@ html {
     display: table;
     clear: both;
   }
+  [class^="col-"] {
+    padding: 0.5rem;
+    float: left;
+  }
