@@ -353,8 +353,7 @@
   *::after {
     box-sizing: border-box;
   }
-
-
+  
   :root {
     --color-primary: #D73953;
     --color-black: #090909;
@@ -408,7 +407,7 @@
     --header-logo-link-top: -1rem;
     --header-logo-link-left: 0;
   }
-  
+
   html {
     scroll-behavior: smooth;
     font-size: 62.5%;
@@ -546,6 +545,20 @@
   
   .card-work:hover .card-title{
     opacity: 1;
+  }
+  
+  .card-testimonial .card-quote{
+    position: relative;
+  }
+  
+  .card-testimonial .card-quote::before{
+    content: "\201C";
+    position: absolute;
+    top: -4.5rem;
+    left: -1rem;
+    color: #efeded;
+    font-size: 10rem;
+    z-index: -1;
   }
   
   .section{
