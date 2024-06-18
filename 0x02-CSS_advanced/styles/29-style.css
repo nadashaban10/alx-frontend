@@ -410,6 +410,7 @@
     --header-logo-link-position: absolute;
     --header-logo-link-top: -1rem;
     --header-logo-link-left: 0;
+    --nav-item-link-hover: var(--color-white);
   }
   
   body {
@@ -467,25 +468,9 @@
     display: block;
     padding: 0.5rem 1rem;
   }
-  .nav .nav-item:hover .nav-link::before {
-    background-color: var(--color-primary);
-    width: 100%;
-  }
-  .nav .nav-link::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: var(--color-white);
-    width: 0;
-    height: 20%;
-  }
   
   .nav .nav-link:hover {
     color: var(--nav-item-link-hover);
-  }
-  .nav-item-link-hover {
-    color: var(--color-white);
   }
   
   .visually-hidden{
@@ -669,6 +654,20 @@
     color: var(--button-hover-color);
     text-decoration: var(--button-hover-text-decoration);
     background: var(--button-hover-background);
+  }
+  .nav .nav-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-white);
+    width: 0;
+    height: 20%;
+  }
+  
+  .nav .nav-item:hover .nav-link::before {
+    background-color: var(--color-primary);
+    width: 100%;
   }
   
   
