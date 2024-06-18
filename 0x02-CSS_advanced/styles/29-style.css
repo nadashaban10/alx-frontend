@@ -353,11 +353,6 @@
   *::after {
     box-sizing: border-box;
   }
-  
-  html {
-      scroll-behavior: smooth;
-      font-size: 62.5%;
-  }
   :root {
     --color-primary: #D73953;
     --color-black: #090909;
@@ -393,7 +388,7 @@
     --nav-item-letter-spacing: 0.04rem;
     --nav-item-display: inline-block;
     --nav-item-margin: 0 0 3rem 0;
-    --nav-item-link-hover: var(--color-primary);
+    --nav-item-link-hover: var(--color-white);
     --section-tagline-margin: 0;
     --button-display: inline-block;
     --button-padding: 1.5rem 3rem;
@@ -410,20 +405,24 @@
     --header-logo-link-position: absolute;
     --header-logo-link-top: -1rem;
     --header-logo-link-left: 0;
-    --nav-item-link-hover: var(--color-white);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
   }
   
   body {
-      color: var(--text-color);
-      font-family: var(--font-family-base);
-      font-size: var(--font-size-medium);
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-medium);
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-base);
   
   }
   
   a{
-      color: #161616;
+    color: #161616;
     text-decoration: none;
   }
   
@@ -469,16 +468,31 @@
     padding: 0.5rem 1rem;
   }
   
-  .nav .nav-link:hover {
-    color: var(--nav-item-link-hover);
+  .nav .nav-link:hover{
+      color: var(--nav-item-link-hover);
+  }
+  
+  .nav .nav-link::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-white);
+    width: 0;
+    height: 0.2rem;
+  }
+  
+  .nav .nav-item:hover .nav-link::before{
+    background-color: var(--color-primary);
+    width: 100%;
   }
   
   .visually-hidden{
-      display: none;
+    display: none;
   }
   
   .card-category{
-      color: var(--color-primary);
+    color: var(--color-primary);
   }
   
   .section{
@@ -509,7 +523,7 @@
   }
   
   .section-tagline{
-      color: var(--color-primary);
+    color: var(--color-primary);
     font-family: var(--font-family-title);
     text-transform: var(--section-tagline-transform);
     font-weight: var(--font-weight-bold);
@@ -523,7 +537,7 @@
   }
   
   h1 h2 h3 h4 h5 h6{
-      font-family: var(--font-family-title);
+    font-family: var(--font-family-title);
     font-weight: var(--font-weight-bold);
   }
   
@@ -655,23 +669,8 @@
     text-decoration: var(--button-hover-text-decoration);
     background: var(--button-hover-background);
   }
-  .nav .nav-link::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: var(--color-white);
-    width: 0;
-    height: 20%;
-  }
-  
-  .nav .nav-item:hover .nav-link::before {
-    background-color: var(--color-primary);
-    width: 100%;
-  }
   
   
   .footer ul {
     text-align: right;
   }
-  
